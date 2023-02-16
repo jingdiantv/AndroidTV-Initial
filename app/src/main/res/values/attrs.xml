@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IconTextScaleView">
+        <attr name="icon_bg" format="reference" />
+        <attr name="icon_text" format="string"/>
+        <attr name="show_text_focus_only" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ScanningConstraintLayout">
+        <attr name="lightImage" format="reference" />
+        <attr name="layoutRadius" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_item_keyboard_input"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/item_focused_bg"
+    android:ellipsize="start"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:gravity="center"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:singleLine="true"
+    android:textColor="@color/src_c3"
+    android:textColorHint="@color/src_c3"
+    android:textSize="16sp" />

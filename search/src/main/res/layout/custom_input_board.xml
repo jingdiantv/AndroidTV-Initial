@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_input_board_show_input"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/item_focused_bg"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:singleLine="true"
+        android:textColor="@color/src_c3"
+        android:textColorHint="@color/src_c3"
+        android:textSize="16sp" />
+
+    <com.zeewain.search.view.FocusKeepRecyclerView
+        android:id="@+id/rv_input_board_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_search" />
+
+</LinearLayout>

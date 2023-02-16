@@ -1,0 +1,24 @@
+<resources>
+
+
+    <!--对话框透明背景-->
+    <style name="Translucent_NoTitle" parent="android:style/Theme.Dialog">
+
+        <!--边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--全屏-->
+        <item name="android:windowFullscreen">true</item>
+        <!--提示框背景（透明）-->
+    <!--   <item name="background">@drawable/shape_corner20_frame</item>-->
+        <item name="android:windowBackground">#00FFFFFF</item>
+        <!--模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+</resources>

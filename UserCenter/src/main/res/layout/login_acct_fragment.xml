@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2A2C41"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.login.AccountLoginFragment">
+
+        <ScrollView
+            android:id="@+id/sv_login_acct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_login_acct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_login_acct_pwd"
+                    android:layout_width="@dimen/focusBtnWidth"
+                    android:layout_height="@dimen/focusBtnHeight"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="13dp"
+                    android:background="@drawable/selector_border_2_space_3_2"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="密码"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    android:paddingLeft="27dp"
+                    android:textColor="@color/input_hint_color"
+                    android:textColorHint="@color/input_hint_color"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_login_acct_login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_login_acct_login"
+                    android:layout_width="@dimen/focusBtnWidth"
+                    android:layout_height="@dimen/focusBtnHeight"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/selector_border_2_space_3_3"
+                    android:text="登录"
+                    android:textColor="#2A2C41"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_login_acct_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginBottom="72dp"
+                    android:text="登录账号"
+                    android:textColor="#FFFFFF"
+                    android:textSize="36sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toTopOf="@id/et_login_acct_acct"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_login_acct_acct"
+                    android:layout_width="@dimen/focusBtnWidth"
+                    android:layout_height="@dimen/focusBtnHeight"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/selector_border_2_space_3_2"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:hint="手机号/账号"
+                    android:inputType="text"
+                    android:maxLength="11"
+                    android:paddingLeft="27dp"
+                    android:textColor="@color/input_hint_color"
+                    android:textColorHint="@color/input_hint_color"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/et_login_acct_pwd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_login_acct_ctrl_pwd"
+                    android:layout_width="97dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/selector_border_2_space_3_2"
+                    android:descendantFocusability="beforeDescendants"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/et_login_acct_pwd"
+                    app:layout_constraintStart_toEndOf="@+id/et_login_acct_pwd"
+                    app:layout_constraintTop_toTopOf="@+id/et_login_acct_pwd">
+
+                    <ImageView
+                        android:id="@+id/iv_login_acct_ctrl_pwd"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="19dp"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/close_eyes_selector"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_login_acct_ctrl_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:duplicateParentState="true"
+                        android:text="显示"
+                        android:textColor="@color/btn_text_color"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_login_acct_ctrl_pwd"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/iv_login_acct_loading"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+
+</layout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_item_search_tips"
+    android:layout_width="match_parent"
+    android:layout_height="28dp"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/input_item_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:text="A"
+    android:textColor="@drawable/selector_item_text3_setting_bg"
+    android:textSize="14sp">
+
+</TextView>

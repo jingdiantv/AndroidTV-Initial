@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2A2C41">
+
+        <TextView
+            android:id="@+id/tv_signout_acct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="270dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="13300003333"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_signout"
+            android:layout_width="@dimen/focusBtnWidth"
+            android:layout_height="@dimen/focusBtnHeight"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="345dp"
+            android:background="@drawable/selector_border_2_space_3_2"
+            android:focusableInTouchMode="true"
+            android:text="退出登录"
+            android:textColor="@color/btn_text_color"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_signout_ava"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="143dp"
+            android:background="@mipmap/img_user_avatar" />
+    </FrameLayout>
+
+
+</layout>

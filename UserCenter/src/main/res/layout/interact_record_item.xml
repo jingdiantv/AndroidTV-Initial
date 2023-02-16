@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/img_record"
+            android:layout_width="340px"
+            android:layout_height="190px"
+            android:layout_margin="20px"
+            android:scaleType="fitXY"
+            android:background="@drawable/bg_mine_select"
+            android:duplicateParentState="true"
+            android:padding="8px"
+            android:src="@mipmap/ic_all_record"
+
+            >
+
+        </ImageView>
+    </RelativeLayout>
+</LinearLayout>

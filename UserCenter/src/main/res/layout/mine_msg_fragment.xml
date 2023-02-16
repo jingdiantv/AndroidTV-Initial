@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/fl_mine_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_mine_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_gradient">
+
+            <TextView
+                android:id="@+id/tv_mine_msg_titile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110px"
+                android:layout_marginTop="60px"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="消息中心"
+                android:textColor="#FFFFFF"
+                android:textSize="60px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/di_mine_msg"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="540px"
+                android:background="#B3FAFAFA"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_mine_msg_noti_app"
+                android:layout_width="398px"
+                android:layout_height="120px"
+                android:layout_marginLeft="100px"
+                android:layout_marginTop="51px"
+                android:background="@drawable/selector_border_2_space_3_1"
+                android:descendantFocusability="beforeDescendants"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mine_msg_titile">
+
+                <TextView
+                    android:id="@+id/tv_mine_msg_noti_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="73px"
+                    android:duplicateParentState="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="应用通知"
+                    android:textColor="@color/tv_color_1"
+                    android:textSize="40px"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_mine_msg_noti_all"
+                android:layout_width="398px"
+                android:layout_height="120px"
+                android:layout_marginTop="34px"
+                android:background="@drawable/selector_border_2_space_3_1"
+                android:descendantFocusability="beforeDescendants"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:layout_constraintStart_toStartOf="@+id/cl_mine_msg_noti_app"
+                app:layout_constraintTop_toBottomOf="@+id/cl_mine_msg_noti_app">
+
+                <TextView
+                    android:id="@+id/tv_mine_msg_noti_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="73px"
+                    android:duplicateParentState="true"
+                    android:text="全部通知"
+                    android:textColor="@color/tv_color_1"
+                    android:textSize="40px"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_mine_msg_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110px"
+                android:layout_marginBottom="90px"
+                android:background="@drawable/mine_msg_clear_cl_selector"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_mine_msg_del"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginTop="20px"
+                    android:layout_marginBottom="20px"
+                    android:background="@drawable/mine_msg_clear_icon_selector"
+                    android:duplicateParentState="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_mine_msg_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6px"
+                    android:layout_marginRight="16px"
+                    android:duplicateParentState="true"
+                    android:text="清空全部"
+                    android:textColor="@color/tv_color_1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_mine_msg_del"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_mine_msg_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="66px"
+                android:layout_marginRight="109px"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="#FFFFFF"
+                android:textSize="48px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ListView
+                android:id="@+id/lv_mine_msg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="84px"
+                android:layout_marginTop="67px"
+                android:descendantFocusability="afterDescendants"
+                android:divider="@color/transparent"
+                android:dividerHeight="32px"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tv_mine_msg_tips"
+                app:layout_constraintStart_toEndOf="@+id/di_mine_msg"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mine_msg_tips">
+
+            </ListView>
+
+            <Button
+                android:id="@+id/btn_mine_msg_clear"
+                android:layout_width="251px"
+                android:layout_height="84px"
+                android:layout_marginTop="54px"
+                android:layout_marginRight="103px"
+                android:background="@drawable/selector_margin_3_2"
+                android:text="全部删除"
+                android:textColor="@color/btn_text_color"
+                android:textSize="40px"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_mine_msg_nothing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/di_mine_msg"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_mine_msg_nothing"
+                    android:layout_width="200px"
+                    android:layout_height="200px"
+                    android:background="@mipmap/img_zero_notify"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_mine_msg_nothing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46px"
+                    android:text="暂时没有消息哦"
+                    android:textColor="#FFFFFF"
+                    android:textSize="48px"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_mine_msg_nothing" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+</layout>

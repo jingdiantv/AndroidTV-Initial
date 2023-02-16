@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="13dp"
+
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/tv_courseware_name"
+        android:layout_width="129dp"
+        android:layout_height="28dp"
+        android:background="@drawable/input_item_bg"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="萌宠摸摸哒"
+        android:textColor="@drawable/selector_item_text3_setting_bg"
+        android:textSize="14sp" />
+
+</LinearLayout>

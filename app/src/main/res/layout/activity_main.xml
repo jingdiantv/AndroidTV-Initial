@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_black_bg"
+        tools:context=".MainActivity"
+        >
+
+        <com.zwn.launcher.widgets.TabHorizontalGridView
+            android:id="@+id/horizontalGridView_main_category"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="70dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="30dp"
+            android:paddingEnd="49dp"
+            app:focusOutEnd="true"
+            app:focusOutFront="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            />
+
+        <com.zwn.launcher.widgets.TabViewPager
+            android:id="@+id/viewPager_product"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalGridView_main_category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            />
+
+        <com.zwn.launcher.widgets.IconTextScaleView
+            android:id="@+id/itsv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="49dp"
+            android:layout_marginTop="22dp"
+            app:icon_bg="@drawable/selector_top_search"
+            app:icon_text="搜索"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zwn.launcher.widgets.IconTextScaleView
+            android:id="@+id/itsv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="22dp"
+            app:icon_bg="@drawable/selector_top_user"
+            app:icon_text="用户"
+            app:layout_constraintLeft_toRightOf="@+id/itsv_search"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zwn.launcher.widgets.IconTextScaleView
+            android:id="@+id/itsv_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="22dp"
+            app:icon_bg="@drawable/selector_top_settings"
+            app:icon_text="设置"
+            app:layout_constraintLeft_toRightOf="@+id/itsv_user"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zwn.launcher.widgets.IconTextScaleView
+            android:id="@+id/itsv_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="22dp"
+            app:icon_bg="@drawable/selector_top_notify"
+            app:icon_text="消息"
+            app:layout_constraintLeft_toRightOf="@+id/itsv_settings"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_app_logo"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="49dp"
+            android:src="@mipmap/bshd_logo"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextClock
+            android:id="@+id/tp_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:format24Hour="hh:mm"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_app_logo"
+            app:layout_constraintRight_toLeftOf="@+id/iv_app_logo"
+            app:layout_constraintTop_toTopOf="@+id/iv_app_logo" />
+
+        <com.zwn.launcher.widgets.IconTextScaleView
+            android:id="@+id/itsv_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="13dp"
+            app:icon_bg="@drawable/selector_top_wifi"
+            app:icon_text="WiFi"
+            app:layout_constraintBottom_toBottomOf="@+id/itsv_notify"
+            app:layout_constraintRight_toLeftOf="@+id/tp_time"
+            app:layout_constraintTop_toTopOf="@+id/itsv_notify" />
+
+        <com.zeewain.base.widgets.LoadingView
+            android:id="@+id/loadingView_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:nextFocusUp="@+id/loadingView_main"
+            android:nextFocusLeft="@+id/loadingView_main"
+            android:nextFocusRight="@+id/loadingView_main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            />
+
+        <com.zeewain.base.widgets.NetworkErrView
+            android:id="@+id/networkErrView_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            app:focusOutEnd="true"
+            app:focusOutFront="true"
+            android:nextFocusUp="@+id/itsv_settings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/id_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="itsv_search,itsv_user,itsv_settings,itsv_notify,itsv_wifi,tp_time,iv_app_logo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</layout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_set"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_search_gradient">
+
+    <TextView
+        android:id="@+id/tv_set_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="30dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="设置"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/sv_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_set_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_set_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/include_set_acct"
+                style="@style/SettingsItemStyle"
+                layout="@layout/layout_settings_item" />
+
+            <include
+                android:id="@+id/include_set_net"
+                style="@style/SettingsItemStyle"
+                layout="@layout/layout_settings_item"
+                android:layout_marginTop="14dp" />
+
+            <include
+                android:id="@+id/include_set_bt"
+                style="@style/SettingsItemStyle"
+                layout="@layout/layout_settings_item"
+                android:layout_marginTop="14dp" />
+
+            <include
+                android:id="@+id/include_set_img"
+                style="@style/SettingsItemStyle"
+                layout="@layout/layout_settings_item"
+                android:layout_marginTop="14dp" />
+
+            <include
+                android:id="@+id/include_set_sound"
+                style="@style/SettingsItemStyle"
+                layout="@layout/layout_settings_item"
+                android:layout_marginTop="14dp" />
+
+            <include
+                android:id="@+id/include_set_system"
+                style="@style/SettingsItemStyle"
+                layout="@layout/layout_settings_item"
+                android:layout_marginTop="14dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/iv_set_intro"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginLeft="164dp"
+        android:layout_marginTop="183dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:src="@mipmap/icon_setting_head"
+        app:layout_constraintStart_toEndOf="@+id/sv_set"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_set_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="登录账号玩转，万千互动应用"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_set_intro"
+        app:layout_constraintStart_toStartOf="@+id/iv_set_intro"
+        app:layout_constraintTop_toBottomOf="@+id/iv_set_intro" />
+</androidx.constraintlayout.widget.ConstraintLayout>

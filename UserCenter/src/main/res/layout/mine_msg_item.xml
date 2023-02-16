@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_mine_msg_item"
+    android:layout_width="match_parent"
+    android:layout_height="204px"
+    android:background="@drawable/mine_msg_item_cl_selector">
+
+    <ImageView
+        android:id="@+id/iv_mine_msg_item"
+        android:layout_width="294px"
+        android:layout_height="0dp"
+        android:layout_marginLeft="27px"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="20px"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mine_list_favor_iv_error" />
+
+    <TextView
+        android:id="@+id/tv_mine_msg_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45px"
+        android:layout_marginTop="15px"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="课件名称"
+        android:textColor="@color/tv_color_1"
+        android:textSize="36px"
+        app:layout_constraintStart_toEndOf="@+id/iv_mine_msg_item"
+        app:layout_constraintTop_toTopOf="@+id/iv_mine_msg_item" />
+
+    <TextView
+        android:id="@+id/tv_mine_msg_item_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25px"
+        android:ellipsize="end"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:maxWidth="553px"
+        android:maxLines="2"
+        android:text="课件介绍课件介绍课件介绍课件介绍 课件介绍最多两行"
+        android:textColor="@color/tv_color_1"
+        android:textSize="28px"
+        app:layout_constraintStart_toStartOf="@+id/tv_mine_msg_item_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mine_msg_item_title" />
+
+    <TextView
+        android:id="@+id/tv_mine_msg_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40px"
+        android:layout_marginBottom="32px"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="2022.03.02"
+        android:textColor="@color/tv_color_1"
+        android:textSize="28px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_mine_msg_item_del"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/selector_del_shadow"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/text_del"
+        android:textSize="40px"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_mine_msg_item"
+        app:layout_constraintEnd_toEndOf="@+id/iv_mine_msg_item"
+        app:layout_constraintStart_toStartOf="@+id/iv_mine_msg_item"
+        app:layout_constraintTop_toTopOf="@+id/iv_mine_msg_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

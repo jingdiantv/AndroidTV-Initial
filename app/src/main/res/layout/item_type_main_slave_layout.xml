@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zwn.launcher.widgets.ScanningConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/FocusStyle"
+    android:layout_width="202dp"
+    android:layout_height="118dp"
+    android:background="@drawable/bg_focus_selector"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardElevation="0px"
+        app:cardBackgroundColor="#00000000"
+        >
+        <ImageView
+            android:id="@+id/iv_type_main_slave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+
+
+</com.zwn.launcher.widgets.ScanningConstraintLayout>

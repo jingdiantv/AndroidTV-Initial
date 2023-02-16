@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/cl_mine_down"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background_gradient">
+
+        <com.zeewain.base.widgets.MyVerticalGridView
+            android:id="@+id/vgv_mine_down"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingLeft="50dp"
+            android:paddingTop="16dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="28dp"
+            app:focusOutEnd="true"
+            app:focusOutFront="true" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp">
+
+            <TextView
+                android:id="@+id/tv_mine_down_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="25dp"
+                android:text="我的下载"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_mine_down_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="54dp"
+                android:textColor="#FFFFFF"
+
+                android:textSize="24sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_mine_down_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_mine_down_title" />
+
+            <Button
+                android:id="@+id/btn_mine_down_clear"
+                style="@style/MineClearButtonStyle"
+                android:layout_marginEnd="52dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_mine_down_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_mine_down_title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <include
+            android:id="@+id/include_mine_down_empty"
+            layout="@layout/layout_empty_downloads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_gravity="center" />
+
+        <include
+            android:id="@+id/include_mine_down_need_login"
+            layout="@layout/layout_need_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+</layout>

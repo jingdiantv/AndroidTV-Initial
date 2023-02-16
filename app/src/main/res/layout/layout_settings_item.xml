@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_set_item"
+    android:layout_width="404dp"
+    android:layout_height="57dp"
+    android:layout_gravity="center"
+    android:background="@drawable/setting_select_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_set_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="34dp"
+        android:duplicateParentState="true"
+        android:textColor="@drawable/selector_item_text1_setting_bg"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_set_item_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="25dp"
+        android:layout_weight="1"
+        android:duplicateParentState="true"
+        android:gravity="right"
+        android:textColor="@drawable/selector_item_text2_setting_bg"
+        android:textSize="21sp" />
+
+    <ImageView
+        android:id="@+id/iv_set_item_arrow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="15dp"
+        android:duplicateParentState="true"
+        android:src="@drawable/setting_select_arrow_bg" />
+</LinearLayout>

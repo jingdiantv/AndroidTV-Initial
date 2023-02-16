@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.ProductListFragment">
+
+    <com.zwn.launcher.widgets.TabVerticalGridView
+        android:id="@+id/tabVerticalGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingStart="49dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="49dp"
+        app:focusOutEnd="true"
+        app:focusOutFront="true"
+        android:visibility="invisible"/>
+
+
+    <com.zeewain.base.widgets.LoadingView
+        android:id="@+id/loadingView_product_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"
+        />
+
+    <com.zeewain.base.widgets.NetworkErrView
+        android:id="@+id/networkErrView_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        app:focusOutEnd="true"
+        app:focusOutFront="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_product_list_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:focusable="false"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:layout_width="260dp"
+            android:layout_height="160dp"
+            android:paddingStart="@dimen/src_dp_26"
+            android:paddingEnd="@dimen/src_dp_26"
+            android:paddingTop="19dp"
+            android:src="@mipmap/ic_no_content"
+            android:contentDescription="@null" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:focusable="false"
+            android:textSize="@dimen/src_font_16"
+            android:textColor="#FFFFFF"
+            android:text="暂无内容"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

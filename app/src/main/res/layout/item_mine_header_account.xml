@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_mine_header_acct"
+    android:layout_width="252dp"
+    android:layout_height="132dp"
+    android:layout_marginStart="50dp"
+    android:layout_marginTop="28dp"
+    android:layout_marginEnd="23dp"
+    android:layout_marginBottom="34dp"
+    android:background="@drawable/selector_mine_account_background"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:nextFocusRight="@id/cl_mine_header_acct">
+
+    <ImageView
+        android:id="@+id/iv_mine_header_avatar"
+        android:layout_width="51dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_mine_header_acct"
+        android:layout_width="66dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="37dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_mine_header_avatar"
+        app:layout_constraintTop_toTopOf="@+id/iv_mine_header_avatar"
+        app:srcCompat="@mipmap/text_self_account" />
+
+    <TextView
+        android:id="@+id/tv_mine_header_acct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_mine_header_acct"
+        app:layout_constraintStart_toStartOf="@+id/iv_mine_header_acct"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mine_header_acct" />
+</androidx.constraintlayout.widget.ConstraintLayout>

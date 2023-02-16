@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_search_gradient"
+        android:orientation="horizontal"
+        android:paddingLeft="55dp"
+        android:paddingTop="39dp">
+
+        <com.zeewain.search.view.CustomEasyTVKeyboard
+            android:id="@+id/kb_search_keyboard"
+            android:layout_width="300dp"
+            android:layout_height="440dp"
+            android:nextFocusRight="@id/rv_search_tips">
+
+        </com.zeewain.search.view.CustomEasyTVKeyboard>
+
+        <View
+            android:id="@+id/view_search_space1"
+            android:layout_width="48dp"
+            android:layout_height="0dp" />
+
+        <include
+            android:id="@+id/include_search_loading"
+            layout="@layout/layout_loading_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/include_search_empty"
+            layout="@layout/layout_empty_search_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/include_search_failed"
+            layout="@layout/layout_req_failed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <com.zeewain.search.view.FocusKeepRecyclerView
+            android:id="@+id/rv_search_tips"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:nextFocusLeft="@id/kb_search_keyboard" />
+
+        <View
+            android:id="@+id/view_search_space2"
+            android:layout_width="48dp"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_course_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="大家都在玩"
+                android:textColor="@color/white"
+                android:textSize="21sp" />
+
+
+            <com.zeewain.base.widgets.MyVerticalGridView
+                android:id="@+id/vgv_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:padding="15dp"
+                app:focusOutEnd="true"
+                app:focusOutFront="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>-->
+</layout>

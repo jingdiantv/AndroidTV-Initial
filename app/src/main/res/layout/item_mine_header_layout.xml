@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.leanback.widget.HorizontalGridView
+        android:id="@+id/hgv_mine_header_acct"
+        android:layout_width="325dp"
+        android:layout_height="194dp" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="55dp"
+        android:orientation="horizontal"
+        app:justifyContent="space_between">
+
+        <include
+            android:id="@+id/include_mine_header_interactions"
+            style="@style/UserDataItemStyle"
+            layout="@layout/layout_mine_data_item" />
+
+        <include
+            android:id="@+id/include_mine_header_practice_days"
+            style="@style/UserDataItemStyle"
+            layout="@layout/layout_mine_data_item" />
+
+        <include
+            android:id="@+id/include_mine_header_interaction_time"
+            style="@style/UserDataItemStyle"
+            layout="@layout/layout_mine_data_item" />
+
+        <include
+            android:id="@+id/include_mine_header_calorie"
+            style="@style/UserDataItemStyle"
+            layout="@layout/layout_mine_data_item" />
+    </com.google.android.flexbox.FlexboxLayout>
+</LinearLayout>

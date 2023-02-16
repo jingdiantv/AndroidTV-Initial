@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/fl_login_sl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2A2C41">
+
+        <TextView
+            android:id="@+id/tv_login_sl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="110dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="登录账号"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/btn_login_sl_msg"
+            android:layout_width="@dimen/focusBtnWidth"
+            android:layout_height="@dimen/focusBtnHeight"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="238dp"
+            android:background="@drawable/selector_border_2_space_3_2"
+            android:focusableInTouchMode="true"
+            android:text="短信验证码登录"
+            android:textColor="@color/btn_text_color"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_login_sl_pwd"
+            android:layout_width="@dimen/focusBtnWidth"
+            android:layout_height="@dimen/focusBtnHeight"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="305dp"
+            android:background="@drawable/selector_border_2_space_3_2"
+            android:text="账号密码登录"
+            android:textColor="@color/btn_text_color"
+            android:textSize="20sp" />
+
+    </FrameLayout>
+</layout>

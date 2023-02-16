@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/fl_mine_hist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background_gradient">
+
+        <com.zeewain.base.widgets.MyVerticalGridView
+            android:id="@+id/vgv_mine_hist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingTop="16dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="28dp"
+            app:focusOutEnd="true"
+            app:focusOutFront="true" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_mine_hist"
+            android:layout_width="match_parent"
+            android:layout_height="88dp">
+
+            <TextView
+                android:id="@+id/tv_mine_hist_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="25dp"
+                android:text="互动记录"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_mine_hist_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="55dp"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_mine_hist_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_mine_hist_title" />
+
+            <Button
+                android:id="@+id/btn_mine_hist_clear"
+                style="@style/MineClearButtonStyle"
+                android:layout_marginEnd="52dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_mine_hist_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_mine_hist_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/include_mine_hist_loading"
+            style="@style/FL_Wrap_center_Style"
+            layout="@layout/layout_loading_dp"
+            android:visibility="visible" />
+
+        <include
+            android:id="@+id/include_mine_hist_empty"
+            layout="@layout/layout_empty_hist"
+            style="@style/FL_Wrap_center_Style" />
+
+        <include
+            android:id="@+id/include_mine_hist_req_failed"
+            layout="@layout/layout_req_failed"
+            style="@style/FL_Wrap_center_Style" />
+
+        <include
+            android:id="@+id/include_mine_hist_need_login"
+            layout="@layout/layout_need_login"
+            style="@style/FL_Wrap_center_Style" />
+
+
+    </FrameLayout>
+
+
+</layout>

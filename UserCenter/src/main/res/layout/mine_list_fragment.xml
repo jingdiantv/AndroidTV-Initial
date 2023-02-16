@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background_gradient">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.zeewain.base.widgets.MyVerticalGridView
+                android:id="@+id/vgv_mine_list"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="179dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="179dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                app:focusOutEnd="true"
+                app:focusOutFront="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mine_list_title" />
+
+            <TextView
+                android:id="@+id/tv_mine_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="184dp"
+                android:layout_marginTop="30dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="我的收藏"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_mine_list_clear"
+                style="@style/MineClearButtonStyle"
+                android:layout_marginEnd="181dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_mine_list_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_mine_list_title" />
+
+            <TextView
+                android:id="@+id/tv_mine_list_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="184dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_mine_list_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_mine_list_title" />
+
+            <include
+                android:id="@+id/incl_mine_list_need_login"
+                layout="@layout/layout_need_login"
+                style="@style/IncludeNeedLoginStyle" />
+
+            <include
+                android:id="@+id/incl_mine_list_zero_favor"
+                layout="@layout/layout_zero_favor"
+                style="@style/IncludeEmptyItemStyle" />
+
+            <include
+                android:id="@+id/incl_mine_list_req_failed"
+                layout="@layout/layout_req_failed"
+                style="@style/IncludeReqFailedStyle" />
+
+            <include
+                android:id="@+id/incl_mine_list_loading"
+                style="@style/IncludeLoadingStyle"
+                layout="@layout/layout_loading_dp"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="455dp"
+                tools:layout_editor_absoluteY="245dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>

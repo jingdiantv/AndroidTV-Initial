@@ -1,0 +1,41 @@
+<resources>
+    <style name="FocusStyle">
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!--对话框透明背景-->
+    <style name="Translucent_NoTitle" parent="android:style/Theme.Dialog">
+
+        <!--边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--提示框背景（透明）-->
+    <!--   <item name="background">@drawable/shape_corner20_frame</item>-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+
+    <style name="SettingsItemStyle">
+        <item name="android:layout_height">57dp</item>
+        <item name="android:layout_width">404dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="UserDataItemStyle">
+        <item name="android:layout_height">97dp</item>
+        <item name="android:layout_width">130dp</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+</resources>

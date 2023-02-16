@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/no_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <include
+        layout="@layout/layout_need_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+       />
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_no_download"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            >
+
+            <ImageView
+
+                android:layout_width="260dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/icon_no_download"
+
+                />
+        <TextView
+            android:layout_marginTop="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/src_c3"
+            android:text="暂时没有下载哦"
+            android:layout_gravity="center_horizontal"
+
+
+            />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="我的下载"
+            android:textColor="@color/src_c3"
+            android:textSize="36dp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_all_delete"
+            android:layout_width="133dp"
+            android:layout_height="42dp"
+           android:layout_margin="4dp"
+            android:focusable="true"
+            android:layout_alignParentRight="true"
+            android:textSize="20dp"
+            android:text="全部删除"
+            android:gravity="center"
+            android:background="@drawable/selector_margin_3_2"
+            android:textColor="@color/btn_text_color"
+            />
+
+        <LinearLayout
+            android:id="@+id/layout_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:padding="3dp"
+            android:layout_margin="4dp"
+            android:layout_alignParentRight="true"
+
+         >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24dp"
+            android:textColor="@color/src_c3"
+            android:text="按"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+
+            />
+            <ImageView
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_edit"
+                android:layout_centerVertical="true"
+                />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="键编辑"
+            android:textColor="@color/src_c3"
+            android:textSize="24dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+
+            />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <com.zeewain.base.widgets.MyVerticalGridView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/grid_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:padding="20dp"
+        app:focusOutEnd="true"
+        app:focusOutFront="true"
+        />
+
+</LinearLayout>
+</layout>
